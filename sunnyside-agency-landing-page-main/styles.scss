@@ -1,0 +1,392 @@
+@import "variables";
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+*{
+    padding:0px;
+    margin:0px;
+    font-size: $defaultFont;
+    line-height: 150%;
+}
+button{
+    cursor:pointer;
+}
+
+.landingArea{
+    background-image: url('images\\desktop\\image-header.jpg') ;
+    background-size: cover;
+    background-position-y: 70%;
+    height:110dvh;
+    font-family: Outfit;
+
+    nav{
+        padding:3%;
+        padding-top:2%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a, a:active,  a:visited{
+            color:$white;
+            text-decoration:none;
+            margin-right:7vh;
+            
+        }
+        button{
+            text-transform: uppercase;
+            padding:10px;
+            padding-left:20px;
+            padding-right:20px;
+            border-radius: 30px;
+            border:none;
+            letter-spacing: 2px;
+            font-size: 13px;
+            font-weight: bolder;
+
+            &:hover{
+                background-color: rgb(150, 218, 250);
+                color:$white;
+
+            }
+        }
+    }
+    .landingAreaTitle{
+        text-align: center;
+        font-size: 3.5em;
+        letter-spacing: 4px;
+        word-spacing: 150%;
+        text-transform: uppercase;
+        font-weight: 800;
+        font-family: $faunces;
+        color:$white;
+        padding-top:3%;
+        
+    }
+    
+    .arrow{
+        display: block;
+        margin:auto;
+        margin-top:5%;
+    }
+}
+
+.brandInformation{
+    display: flex;
+    font-family: $faunces;
+    height:70dvh;
+
+    img{
+        width: 50%;
+    }
+
+    .brandInformationText{
+        padding:5%;
+        padding-left:10%;
+        padding-right: 10%;
+        width:30%;
+
+        
+        
+        .informationTitle{
+            font-size: 2.4em;
+            font-weight: bolder;
+            color:black;
+            line-height: 120%;
+            
+        }
+        .informationData{
+            color:$darkGrayishBlue;
+            padding-top:5%;
+            padding-bottom: 6%;
+            
+        }
+        button{
+            background-color: transparent;
+            border:none;
+            font-weight: bolder;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+        }
+        button:after{
+            position: absolute;
+            content:"";
+            z-index: -2;
+            left:0px;
+            bottom:-3px;
+            width:100%;
+            height:10px;
+            opacity:50%;
+            background-color: $yellow;
+        }
+        button:hover:after{
+            opacity:100%;
+        }
+    }
+}
+
+.secondInfoDiv{
+    flex-direction: row-reverse;
+
+    button:after{
+        background-color: $softRed !important;
+    }
+    button:hover:after{
+        opacity:100% !important;
+    }
+}
+
+.offersInfo{
+    display: flex;
+
+
+    .offersWrapper{
+    width:50%;  
+    background-image: url("images\\desktop\\image-graphic-design.jpg");
+    background-size: cover;
+    background-position-x: 50%;
+    height:70dvh;
+    padding-left:13%;
+    padding-right: 13%;
+    display: flex;
+    padding-bottom: 3%;
+    flex-direction: column;
+   justify-content: flex-end;
+font-family: $faunces;
+
+    .offerTitle{
+        text-align: center;
+        color:$darkSaturatedCyan;
+        font-size: 1.8em;
+        font-weight: bolder;
+        margin-bottom: 5%;
+    }
+    .offerText{
+        color:$darkSaturatedCyan;
+        text-align: center;
+        font-weight: 500;
+        
+    }
+        
+}
+    .offerRight{
+
+        background-image: url("images\\desktop\\image-photography.jpg");
+    }
+}
+
+.testimonials{
+    display: flex;
+    flex-direction: column;
+    padding-top:10%;
+    font-family: $faunces;
+
+    .testimonialsTitle{
+        text-align: center;
+        text-transform: uppercase;
+        color:$grayishBlue;
+        font-weight: bolder;
+        letter-spacing: 6px;
+        font-size: 1.2em;
+    }
+
+    .testimonialWrapper{
+        display: flex;
+        align-items: center;
+        margin-top:5%;
+        padding-left:10%;
+        padding-right: 10%;
+    }
+
+    .testimonial{
+        display: grid;
+        place-items: center;
+        padding-left: 2%;
+        padding-right: 2%;
+       
+
+        img{
+            border-radius: 50%;
+            height:60%;
+        }
+
+        .testimonialMessage{
+            text-align: center;
+            color:$darkGrayishBlue;
+            margin-top:6dvh;
+
+        }
+        .testimonialName{
+            margin-top:5dvh;
+            font-weight: bolder;
+            text-transform: capitalize;
+            letter-spacing: 1px;
+            color: $veryDarkSaturatedBlue;
+        }
+        .testimonialJob{
+            margin-top:1dvh;
+            color:$grayishBlue;
+            letter-spacing: 1px;
+        }
+    }
+
+}
+
+.gallery{
+    margin-top:10%;
+    display: flex;
+    min-height:70dvh;
+    .galleryElem{
+        display: flex;
+        width:50%;
+        img{
+            width:100%;
+        }
+    }
+}
+
+footer{
+    background-color: $darkModerateCyan;
+    display: grid;
+    place-items: center;
+    padding:5%;
+    padding-top:6dvh;
+    padding-bottom: 0%;
+
+    .footerLinks{
+        padding-top: 6dvh;
+        padding-bottom: 8dvh;
+
+        a, a:active, a:focus{
+            color:$darkSaturatedCyan;
+            text-decoration: none;
+            padding:3dvh;
+            letter-spacing: 1px;
+        
+        }
+        a:hover{
+            color:$white;
+        }
+    }
+    .socials{
+
+        img{
+
+            padding:2dvh;
+            cursor:pointer;
+            margin-bottom:2dvh;
+        }
+        img:hover{
+            fill: white;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .landingAreaLinks{
+        display: none;
+    }
+    .landingArea{
+        background-position-x: 50%;
+        .landingAreaTitle{
+        font-size: 2em;
+        margin-top:10%
+        }
+        nav{
+            padding:4vh;
+        }
+    }
+
+    .brandInformation{
+        flex-direction: column-reverse;
+        height:auto;
+        padding-bottom: 15%;
+    
+
+        img{
+            width:100vw;
+        
+        }
+        .brandInformationText{
+           width:auto;
+
+            .informationTitle{
+                padding-top: 15%;
+                font-size: 1.6em;
+                text-align: center;
+            }
+            .informationData{
+                text-align: center;
+            }
+            button{
+                display: block;
+                margin: auto;
+               
+            }
+           
+        }
+    }
+
+    .offersInfo{
+        flex-direction: column;
+
+        .offersWrapper{
+            width:100%;
+            padding:0px;
+
+            .offerTitle{
+                font-size: 1.5em;
+               
+            }
+            .offerText{
+                margin-bottom: 10%;
+                font-size: 15px;
+                padding-left: 5%;
+                padding-right: 5%;
+                
+            }
+        }
+    }
+
+    .testimonials{
+        .testimonialsTitle{
+            font-size: 0.8em;
+            margin-top: 5%;
+        }
+        .testimonialWrapper{
+            flex-direction: column;
+           
+        }
+        .testimonial{
+            margin-top:8dvh;
+
+            .testimonialMessage{
+                margin-top:3dvh;
+            }
+        }
+    }
+    .gallery{
+        flex-direction: column;
+        .galleryElem{
+            width: 100%;
+        }
+    }
+}
+
+.hidden{
+    opacity:0;
+    filter:blur(5px);
+    transform: translateX(-100%);
+    transition:  all 1s;
+}
+
+.load {
+    opacity:1;
+    filter: blur(0);
+    transform: translateX(0);
+}

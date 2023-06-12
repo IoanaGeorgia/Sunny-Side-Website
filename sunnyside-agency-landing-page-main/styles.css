@@ -1,0 +1,330 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.landingArea {
+  background-image: url("images\\desktop\\image-header.jpg");
+  background-size: cover;
+  background-position-y: 70%;
+  height: 110dvh;
+  font-family: Outfit;
+}
+.landingArea nav {
+  padding: 3%;
+  padding-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.landingArea nav a, .landingArea nav a:active, .landingArea nav a:visited {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  margin-right: 7vh;
+}
+.landingArea nav button {
+  text-transform: uppercase;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 30px;
+  border: none;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: bolder;
+}
+.landingArea nav button:hover {
+  background-color: rgb(150, 218, 250);
+  color: hsl(0, 0%, 100%);
+}
+.landingArea .landingAreaTitle {
+  text-align: center;
+  font-size: 3.5em;
+  letter-spacing: 4px;
+  word-spacing: 150%;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: "Fraunces", serif;
+  color: hsl(0, 0%, 100%);
+  padding-top: 3%;
+}
+.landingArea .arrow {
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.brandInformation {
+  display: flex;
+  font-family: "Fraunces", serif;
+  height: 70dvh;
+}
+.brandInformation img {
+  width: 50%;
+}
+.brandInformation .brandInformationText {
+  padding: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 30%;
+}
+.brandInformation .brandInformationText .informationTitle {
+  font-size: 2.4em;
+  font-weight: bolder;
+  color: black;
+  line-height: 120%;
+}
+.brandInformation .brandInformationText .informationData {
+  color: hsl(232, 10%, 55%);
+  padding-top: 5%;
+  padding-bottom: 6%;
+}
+.brandInformation .brandInformationText button {
+  background-color: transparent;
+  border: none;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+.brandInformation .brandInformationText button:after {
+  position: absolute;
+  content: "";
+  z-index: -2;
+  left: 0px;
+  bottom: -3px;
+  width: 100%;
+  height: 10px;
+  opacity: 50%;
+  background-color: hsl(51, 100%, 49%);
+}
+.brandInformation .brandInformationText button:hover:after {
+  opacity: 100%;
+}
+
+.secondInfoDiv {
+  flex-direction: row-reverse;
+}
+.secondInfoDiv button:after {
+  background-color: hsl(7, 99%, 70%) !important;
+}
+.secondInfoDiv button:hover:after {
+  opacity: 100% !important;
+}
+
+.offersInfo {
+  display: flex;
+}
+.offersInfo .offersWrapper {
+  width: 50%;
+  background-image: url("images\\desktop\\image-graphic-design.jpg");
+  background-size: cover;
+  background-position-x: 50%;
+  height: 70dvh;
+  padding-left: 13%;
+  padding-right: 13%;
+  display: flex;
+  padding-bottom: 3%;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: "Fraunces", serif;
+}
+.offersInfo .offersWrapper .offerTitle {
+  text-align: center;
+  color: hsl(167, 40%, 24%);
+  font-size: 1.8em;
+  font-weight: bolder;
+  margin-bottom: 5%;
+}
+.offersInfo .offersWrapper .offerText {
+  color: hsl(167, 40%, 24%);
+  text-align: center;
+  font-weight: 500;
+}
+.offersInfo .offerRight {
+  background-image: url("images\\desktop\\image-photography.jpg");
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10%;
+  font-family: "Fraunces", serif;
+}
+.testimonials .testimonialsTitle {
+  text-align: center;
+  text-transform: uppercase;
+  color: hsl(210, 4%, 67%);
+  font-weight: bolder;
+  letter-spacing: 6px;
+  font-size: 1.2em;
+}
+.testimonials .testimonialWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.testimonials .testimonial {
+  display: grid;
+  place-items: center;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.testimonials .testimonial img {
+  border-radius: 50%;
+  height: 60%;
+}
+.testimonials .testimonial .testimonialMessage {
+  text-align: center;
+  color: hsl(232, 10%, 55%);
+  margin-top: 6dvh;
+}
+.testimonials .testimonial .testimonialName {
+  margin-top: 5dvh;
+  font-weight: bolder;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: hsl(212, 27%, 19%);
+}
+.testimonials .testimonial .testimonialJob {
+  margin-top: 1dvh;
+  color: hsl(210, 4%, 67%);
+  letter-spacing: 1px;
+}
+
+.gallery {
+  margin-top: 10%;
+  display: flex;
+  min-height: 70dvh;
+}
+.gallery .galleryElem {
+  display: flex;
+  width: 50%;
+}
+.gallery .galleryElem img {
+  width: 100%;
+}
+
+footer {
+  background-color: hsl(168, 34%, 41%);
+  display: grid;
+  place-items: center;
+  padding: 5%;
+  padding-top: 6dvh;
+  padding-bottom: 0%;
+}
+footer .footerLinks {
+  padding-top: 6dvh;
+  padding-bottom: 8dvh;
+}
+footer .footerLinks a, footer .footerLinks a:active, footer .footerLinks a:focus {
+  color: hsl(167, 40%, 24%);
+  text-decoration: none;
+  padding: 3dvh;
+  letter-spacing: 1px;
+}
+footer .footerLinks a:hover {
+  color: hsl(0, 0%, 100%);
+}
+footer .socials img {
+  padding: 2dvh;
+  cursor: pointer;
+  margin-bottom: 2dvh;
+}
+footer .socials img:hover {
+  fill: white;
+}
+
+@media (max-width: 375px) {
+  .landingAreaLinks {
+    display: none;
+  }
+  .landingArea {
+    background-position-x: 50%;
+  }
+  .landingArea .landingAreaTitle {
+    font-size: 2em;
+    margin-top: 10%;
+  }
+  .landingArea nav {
+    padding: 4vh;
+  }
+  .brandInformation {
+    flex-direction: column-reverse;
+    height: auto;
+    padding-bottom: 15%;
+  }
+  .brandInformation img {
+    width: 100vw;
+  }
+  .brandInformation .brandInformationText {
+    width: auto;
+  }
+  .brandInformation .brandInformationText .informationTitle {
+    padding-top: 15%;
+    font-size: 1.6em;
+    text-align: center;
+  }
+  .brandInformation .brandInformationText .informationData {
+    text-align: center;
+  }
+  .brandInformation .brandInformationText button {
+    display: block;
+    margin: auto;
+  }
+  .offersInfo {
+    flex-direction: column;
+  }
+  .offersInfo .offersWrapper {
+    width: 100%;
+    padding: 0px;
+  }
+  .offersInfo .offersWrapper .offerTitle {
+    font-size: 1.5em;
+  }
+  .offersInfo .offersWrapper .offerText {
+    margin-bottom: 10%;
+    font-size: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .testimonials .testimonialsTitle {
+    font-size: 0.8em;
+    margin-top: 5%;
+  }
+  .testimonials .testimonialWrapper {
+    flex-direction: column;
+  }
+  .testimonials .testimonial {
+    margin-top: 8dvh;
+  }
+  .testimonials .testimonial .testimonialMessage {
+    margin-top: 3dvh;
+  }
+  .gallery {
+    flex-direction: column;
+  }
+  .gallery .galleryElem {
+    width: 100%;
+  }
+}
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.load {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}/*# sourceMappingURL=styles.css.map */
