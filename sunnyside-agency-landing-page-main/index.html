@@ -30,6 +30,17 @@
 <body>
 
   <div class="landingArea">
+
+
+    <div id='smallScreenMenu' class="smallScreenMenu">
+              <button class='smallScreenMenuClose' onclick="smallScreenMenuClose()">Close</button>
+              <a href="">About</a>
+              <a href="">Services</a>
+              <a href="">Projects</a>
+              <button>Contact</button>
+    </div>
+
+
     <nav>
       <img src="images\logo.svg">
       <div class="landingAreaLinks">
@@ -38,6 +49,7 @@
         <a href="">Projects</a>
         <button>Contact</button>
       </div>
+      <button id="smallScreenMenuButton" class="landingAreaSmallScreenButton" onclick="openSmallScreenMenu()">|||</button>
     </nav>
     <div class="landingAreaTitle">
       We are creatives
@@ -165,13 +177,54 @@
 
   <script>
 
+let smallScreenMenu = document.getElementById('smallScreenMenu')
+let smallScreenMenuButton  = document.getElementById('smallScreenMenuButton')
+let windowWidth;
+
+window.addEventListener('resize', setWindowWidth)
+
+function openSmallScreenMenu(){
+  smallScreenMenuButton.style.display = 'none'
+  smallScreenMenu.style.display='flex'
+  
+}
+
+  function setWindowWidth(){
+
+    windowWidth = document.body.clientWidth
+
+          if (windowWidth > 700) {
+      smallScreenMenuButton.style.display = 'none'
+      smallScreenMenu.style.display = 'none'
+    } else {
+      smallScreenMenuButton.style.display = 'block'
+    }
+
+        if (smallScreenMenu.style.display == 'flex') {
+      smallScreenMenuButton.style.display = 'none'
+    }
+  }
+
+// do a let menu clciked buttpn and update it and ur done
+
+function smallScreenMenuClose(){
+
+  if (windowWidth > 700) {
+    smallScreenMenuButton.style.display = 'none'
+    smallScreenMenu.style.display = 'none'
+  } else {
+    smallScreenMenuButton.style.display = 'block'
+    smallScreenMenu.style.display ='none'
+  }
+
+}
+
     let previousY = 0
     let previousRatio = 0
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const currentY = entry.boundingClientRect.y
         const currentRatio = entry.intersectionRatio
-        console.log(currentY, previousY)
         if (currentY >= previousY) {
           if (entry.isIntersecting) {
             entry.target.classList.add('load');
